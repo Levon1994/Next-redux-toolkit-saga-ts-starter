@@ -1,0 +1,103 @@
+@import '../../../styles/mixins';
+
+.svgIcon {
+  > div {
+    @include center;
+  }
+
+  &_size {
+    &_xs {
+      @include svg-size(10px);
+    }
+
+    &_sm {
+      @include svg-size(12px);
+    }
+
+    &_md {
+      @include svg-size(16px);
+    }
+
+    &_lg {
+      @include svg-size(20px);
+    }
+
+    &_xl {
+      @include svg-size(24px);
+    }
+
+    &_xxl {
+      @include svg-size(32px);
+    }
+
+    &_xxxl {
+      @include svg-size(40px);
+    }
+  }
+
+  &_color {
+    &_primary {
+      @include svg-color(var(--iconPrimary));
+    }
+
+    &_primaryDark {
+      @include svg-color(var(--iconPrimaryDark));
+    }
+
+    &_secondary {
+      @include svg-color(var(--secondary));
+    }
+
+    &_third {
+      @include svg-color(var(--third));
+    }
+
+    &_valid {
+      @include svg-color(var(--valid));
+    }
+
+    &_error {
+      @include svg-color(var(--error));
+    }
+  }
+
+  &_rotate {
+    &_90 {
+      transform: rotate(90deg);
+    }
+
+    &_180 {
+      transform: rotate(180deg);
+    }
+
+    &_270 {
+      transform: rotate(270deg);
+    }
+
+    &_360 {
+      transform: rotate(360deg);
+    }
+  }
+
+  &_top {
+    &_1 {
+      margin-top: 1px;
+    }
+
+    &_2 {
+      margin-top: 2px;
+    }
+
+    &_3 {
+      margin-top: 3px;
+    }
+
+    &_4 {
+      margin-top: 4px;
+    }
+  }
+
+  &_pointer {
+    cursor: pointer;
+  }
+}

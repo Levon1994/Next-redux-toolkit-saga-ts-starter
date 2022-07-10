@@ -1,0 +1,7 @@
+@import '../../../../styles/constants';
+
+.homeSection {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  padding: calc(24px + #{$landing-header-height}) 24px 0;
+}

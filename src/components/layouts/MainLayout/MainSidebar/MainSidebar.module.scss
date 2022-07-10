@@ -1,0 +1,16 @@
+@import '../../../../styles/constants';
+
+@keyframes move {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mainSidebar {
+  width: $main-sidebar-width;
+  height: calc(100% - #{$main-header-height});
+  background-color: var(--primary);
+  transform: translateX(-100%);
+
+  animation: move 0.3s linear both;
+}

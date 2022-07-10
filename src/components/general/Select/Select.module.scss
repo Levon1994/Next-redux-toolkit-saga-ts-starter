@@ -1,0 +1,232 @@
+/* stylelint-disable max-nesting-depth */
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.selectWrapper {
+  height: 100%;
+  min-height: inherit;
+  box-shadow: none;
+
+  &_error {
+    .select__control {
+      border: 1px solid var(--error);
+    }
+
+    .multi-select__control {
+      border: 1px solid var(--error);
+    }
+  }
+
+  &_disabled {
+    .select__control--is-focused {
+      border: 1px solid var(--borderPrimary);
+    }
+
+    .select__menu {
+      display: none;
+    }
+
+    .multi-select__control--is-focused {
+      border: 1px solid var(--borderPrimary);
+    }
+
+    .multi-select__menu {
+      display: none;
+    }
+  }
+
+  &__rightBlock {
+    &_xs {
+      :global {
+        .select {
+          &__indicators {
+            width: 28px;
+          }
+        }
+
+        .multiSelect {
+          &__indicators {
+            width: 28px;
+          }
+        }
+      }
+    }
+
+    &_sm {
+      :global {
+        .select {
+          &__indicators {
+            width: 36px;
+          }
+        }
+
+        .multiSelect {
+          &__indicators {
+            width: 36px;
+          }
+        }
+      }
+    }
+
+    &_md {
+      :global {
+        .select {
+          &__indicators {
+            width: 44px;
+          }
+        }
+
+        .multiSelect {
+          &__indicators {
+            width: 44px;
+          }
+        }
+      }
+    }
+
+    &_lg {
+      :global {
+        .select {
+          &__indicators {
+            width: 52px;
+          }
+        }
+
+        .multiSelect {
+          &__indicators {
+            width: 52px;
+          }
+        }
+      }
+    }
+  }
+
+  :global {
+    .select {
+      min-height: inherit;
+
+      &__control {
+        height: 100%;
+        min-height: inherit;
+        background: var(--bgPrimary);
+        border: 1px solid var(--borderPrimary);
+        border-radius: $border-radius;
+        box-shadow: none;
+        transition: border $anim-time-fast;
+
+        &--is-focused {
+          border: 1px solid var(--third);
+        }
+      }
+
+      &__placeholder {
+        color: var(--textHint);
+      }
+
+      &__indicators {
+        @include center;
+      }
+
+      &__indicator-separator {
+        display: none;
+      }
+
+      &__value-container {
+        min-height: inherit;
+        padding-left: 16px;
+      }
+
+      &__menu {
+        overflow: hidden;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-light;
+        animation: mount $anim-time;
+      }
+
+      &__menu-list {
+        padding: 0;
+      }
+
+      &__option {
+        &:hover {
+          cursor: pointer;
+          background: var(--primaryDark);
+        }
+      }
+    }
+
+    .multiSelect {
+      min-height: inherit;
+
+      &__control {
+        height: 100%;
+        min-height: inherit;
+        background: var(--bgPrimary);
+        border: 1px solid var(--borderPrimary);
+        border-radius: $border-radius;
+        box-shadow: none;
+        transition: border $anim-time-fast;
+
+        &--is-focused {
+          border: 1px solid var(--third);
+        }
+      }
+
+      &__placeholder {
+        color: var(--textHint);
+      }
+
+      &__indicators {
+        @include center;
+      }
+
+      &__indicator-separator {
+        display: none;
+      }
+
+      &__value-container {
+        min-height: inherit;
+        padding-left: 16px;
+      }
+
+      &__multi-value {
+        padding: 2px 4px;
+        background: #fff;
+        border-radius: $border-radius;
+      }
+
+      &__multi-value__label {
+        font-size: 14px;
+      }
+
+      &__multi-value__remove {
+        &:hover {
+          cursor: pointer;
+          background: none;
+        }
+      }
+
+      &__indicator {
+        cursor: pointer;
+      }
+
+      &__menu {
+        overflow: hidden;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-light;
+        animation: mount $anim-time;
+      }
+
+      &__menu-list {
+        padding: 0;
+      }
+
+      &__option {
+        &:hover {
+          cursor: pointer;
+          background: var(--primaryDark);
+        }
+      }
+    }
+  }
+}

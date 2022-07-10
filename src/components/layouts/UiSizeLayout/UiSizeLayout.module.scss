@@ -1,0 +1,63 @@
+@import '../../../styles/constants';
+
+.uiSizeLayout {
+  &_width {
+    &_xs {
+      width: 80px;
+    }
+
+    &_sm {
+      width: 120px;
+
+      @media (max-width: $breakpoint-up-md) {
+        width: 80px;
+      }
+    }
+
+    &_md {
+      width: 150px;
+    }
+
+    &_lg {
+      width: 200px;
+    }
+
+    &_xl {
+      width: 300px;
+    }
+
+    &_full {
+      width: 100%;
+    }
+
+    &_content {
+      display: inline-flex;
+    }
+  }
+
+  &_height {
+    &_xs {
+      min-height: 28px;
+      font-size: 0.8125rem;
+    }
+
+    &_sm {
+      min-height: 36px;
+      font-size: 0.875rem;
+    }
+
+    &_md {
+      min-height: 44px;
+      font-size: 1rem;
+    }
+
+    &_lg {
+      min-height: 52px;
+      font-size: 1.125rem;
+    }
+
+    &_full {
+      height: 100%;
+    }
+  }
+}

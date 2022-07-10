@@ -1,0 +1,46 @@
+html[data-palette='light'] {
+  --primaryDark: #f2f2f2;
+  --primary: #fff;
+
+  --secondaryContrastText: #fff;
+  --secondaryLight: #66a9f7;
+  --secondaryDark: #0064da;
+  --secondary: #0070f3;
+
+  --thirdContrastText: #fff;
+  --thirdLight: #a5b2e5;
+  --thirdDark: #5c6cab;
+  --third: #7387d6;
+
+  // Statuses colors
+  --errorLight: #ff5773;
+  --error: #ff3e5f;
+  --validLight: #50b780;
+  --valid: #39a36a;
+  --warning: #ff8a00;
+
+  // Background colors
+  --bgSecondary: #fff;
+  --bgPrimary: #fbfbfb;
+
+  // Icons colors
+  --iconPrimaryDark: #3b3b3b;
+  --iconPrimary: #808080;
+
+  // Border colors
+  --borderPrimary: #e2e2e2;
+  --borderDark: #bababa;
+
+  // Text colors
+  --textPrimaryDark: #3b3b3b;
+  --textSecondary: #0070f3;
+  --textPrimary: #404040;
+  --textThird: #7387d6;
+  --textLight: #707070;
+  --textDark: #000;
+  --textHint: #bababa;
+
+  // Shadow colors
+  --shadowColorSecondary: rgba(0, 0, 0, 0.2);
+  --shadowColorPrimary: rgba(0, 0, 0, 0.16);
+}

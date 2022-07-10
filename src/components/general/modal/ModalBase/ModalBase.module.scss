@@ -1,0 +1,101 @@
+@import '../../../../styles/constants';
+@import '../../../../styles/mixins';
+
+@keyframes modal-content {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  @include center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000000;
+  overflow: hidden;
+  pointer-events: none;
+
+  &_open {
+    z-index: 1000001;
+    pointer-events: auto;
+
+    .modal__content {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: modal-content 0.4s 0.2s forwards;
+    }
+
+    .modal__backdrop {
+      opacity: 0;
+      animation: show 0.15s forwards;
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(2px);
+    will-change: opacity;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    min-height: 240px;
+    margin: 24px;
+    overflow: auto;
+    background-color: var(--primary);
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-modal;
+    will-change: transform, opacity;
+
+    &_width {
+      &_xs {
+        max-width: 460px;
+      }
+
+      &_sm {
+        max-width: 575px;
+      }
+
+      &_md {
+        max-width: 767px;
+      }
+
+      &_min-content {
+        width: initial;
+        max-width: initial;
+      }
+
+      &_full {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: $breakpoint-down-xs) {
+      max-width: 100%;
+      height: 100vh;
+      margin: 0;
+      border-radius: 0;
+    }
+  }
+}

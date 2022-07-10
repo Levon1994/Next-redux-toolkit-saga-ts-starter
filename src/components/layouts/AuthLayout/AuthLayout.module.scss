@@ -1,0 +1,14 @@
+@import '../../../styles/mixins';
+
+.authLayout {
+  @include center;
+  position: relative;
+  min-height: 100vh;
+  padding: 84px 24px;
+  background-color: var(--bgPrimary);
+
+  main {
+    @include center;
+    width: 100%;
+  }
+}

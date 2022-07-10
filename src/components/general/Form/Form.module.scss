@@ -1,0 +1,13 @@
+.form {
+  width: 100%;
+
+  &_width {
+    &_md {
+      max-width: 360px;
+    }
+
+    &_full {
+      max-width: 100%;
+    }
+  }
+}

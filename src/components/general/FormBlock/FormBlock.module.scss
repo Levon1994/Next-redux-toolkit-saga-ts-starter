@@ -1,0 +1,53 @@
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &_mb {
+    &_s1 {
+      margin-bottom: 8px;
+    }
+
+    &_s2 {
+      margin-bottom: 16px;
+    }
+
+    &_s3 {
+      margin-bottom: 24px;
+    }
+
+    &_s4 {
+      margin-bottom: 32px;
+    }
+
+    &_s5 {
+      margin-bottom: 40px;
+    }
+
+    &_s6 {
+      margin-bottom: 48px;
+    }
+
+    &_s7 {
+      margin-bottom: 56px;
+    }
+
+    &_s8 {
+      margin-bottom: 64px;
+    }
+
+    &_s9 {
+      margin-bottom: 72px;
+    }
+
+    &_s10 {
+      margin-bottom: 80px;
+    }
+  }
+
+  &_align {
+    &_center {
+      align-items: center;
+    }
+  }
+}

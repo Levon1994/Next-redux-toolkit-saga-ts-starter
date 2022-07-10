@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "landing": {
+      "title": "Bonjour le monde!"
+    }
+  },
+
+  "forms": {
+    "sign-in-form": {
+      "title": "S'identifier"
+    }
+  },
+
+  "layout": {
+    "language-name-en-US": "En",
+    "language-name-fr": "Fr",
+    "language-name-de": "De"
+  }
+}

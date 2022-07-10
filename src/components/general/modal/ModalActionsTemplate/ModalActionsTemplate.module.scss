@@ -1,0 +1,19 @@
+.modalActionsTemplate {
+  padding: 0 1.5rem 1.5rem;
+
+  &[data-buttons-quantity='2'] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+  }
+
+  &[data-buttons-quantity='3'] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+
+  &_noPadding {
+    padding: 0;
+  }
+}

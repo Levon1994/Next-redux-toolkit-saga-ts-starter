@@ -1,0 +1,33 @@
+@import '../../../styles/constants';
+
+.mainLayout {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'nav main';
+  grid-template-rows: $main-header-height 1fr;
+  grid-template-columns: $main-sidebar-width 1fr;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bgPrimary);
+
+  header {
+    position: fixed;
+    z-index: 1001;
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    width: 100%;
+    padding: 24px 24px 48px;
+  }
+
+  nav {
+    position: fixed;
+    top: $main-header-height;
+    z-index: 1000;
+    grid-area: nav;
+  }
+}

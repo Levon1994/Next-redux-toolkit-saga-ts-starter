@@ -1,0 +1,9 @@
+.simpleModal {
+  &__content {
+    padding: 0 12px 12px;
+
+    &_noPadding {
+      padding: 0;
+    }
+  }
+}

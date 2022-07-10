@@ -1,0 +1,87 @@
+@import '../../../styles/mixins';
+
+.reactIcon {
+  @include center;
+
+  > svg {
+    vertical-align: middle;
+  }
+
+  &_size {
+    &_xs {
+      font-size: 10px;
+    }
+
+    &_sm {
+      font-size: 12px;
+    }
+
+    &_md {
+      font-size: 16px;
+    }
+
+    &_lg {
+      font-size: 20px;
+    }
+
+    &_xl {
+      font-size: 24px;
+    }
+
+    &_xxl {
+      font-size: 32px;
+    }
+
+    &_xxxl {
+      font-size: 40px;
+    }
+  }
+
+  &_color {
+    &_primaryDark {
+      color: var(--iconPrimaryDark);
+    }
+
+    &_primary {
+      color: var(--iconPrimary);
+    }
+
+    &_secondary {
+      color: var(--secondary);
+    }
+
+    &_third {
+      color: var(--third);
+    }
+
+    &_valid {
+      color: var(--valid);
+    }
+
+    &_error {
+      color: var(--error);
+    }
+  }
+
+  &_rotate {
+    &_90 {
+      transform: rotate(90deg);
+    }
+
+    &_180 {
+      transform: rotate(180deg);
+    }
+
+    &_270 {
+      transform: rotate(270deg);
+    }
+
+    &_360 {
+      transform: rotate(360deg);
+    }
+  }
+
+  &_pointer {
+    cursor: pointer;
+  }
+}

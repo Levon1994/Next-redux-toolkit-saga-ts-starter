@@ -1,0 +1,12 @@
+@import '../../../styles/mixins';
+
+.contentFrame {
+  width: 100%;
+  max-width: 1704px;
+  height: 100%;
+  margin: 0 auto;
+
+  &_fluid {
+    max-width: 100%;
+  }
+}

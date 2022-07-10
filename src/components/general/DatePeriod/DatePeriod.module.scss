@@ -1,0 +1,9 @@
+.datePeriod {
+  display: flex;
+
+  > * {
+    &:first-child {
+      margin-right: 24px;
+    }
+  }
+}

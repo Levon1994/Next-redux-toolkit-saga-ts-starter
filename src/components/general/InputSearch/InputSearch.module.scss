@@ -1,0 +1,139 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.inputSearch {
+  position: relative;
+  min-height: inherit;
+
+  input {
+    width: 100%;
+    min-height: inherit;
+    padding: 0 16px;
+    color: var(--textPrimary);
+    background-color: var(--bgPrimary);
+    border: 1px solid var(--borderPrimary);
+    border-radius: $border-radius;
+    outline: none;
+    box-shadow: none;
+    transition: border-color $anim-time-fast, background-color $anim-time-fast, opacity $anim-time;
+    -webkit-appearance: none;
+
+    &::placeholder {
+      color: var(--textHint);
+    }
+
+    &:focus {
+      border-color: var(--third);
+      box-shadow: none;
+    }
+  }
+
+  &__iconWrapper {
+    @include center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 100%;
+    transform: translateY(-50%);
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: 44px;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+  }
+
+  &__clearIconWrapper {
+    @include center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    &:hover {
+      > div {
+        color: var(--iconPrimaryDark);
+      }
+    }
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: 44px;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+  }
+
+  &_iconWrapper {
+    &_xs {
+      input {
+        padding-left: 28px;
+      }
+    }
+
+    &_sm {
+      input {
+        padding-left: 36px;
+      }
+    }
+
+    &_md {
+      input {
+        padding-left: 44px;
+      }
+    }
+
+    &_lg {
+      input {
+        padding-left: 52px;
+      }
+    }
+  }
+
+  &_clearWrapper {
+    &_xs {
+      input {
+        padding-right: 28px;
+      }
+    }
+
+    &_sm {
+      input {
+        padding-right: 36px;
+      }
+    }
+
+    &_md {
+      input {
+        padding-right: 44px;
+      }
+    }
+
+    &_lg {
+      input {
+        padding-right: 52px;
+      }
+    }
+  }
+}

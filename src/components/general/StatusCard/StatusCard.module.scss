@@ -1,0 +1,33 @@
+.statusCard {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+
+  &__iconWrapper {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    border-radius: 50%;
+
+    &_success {
+      border: 2px solid var(--validLight);
+
+      > div {
+        color: var(--validLight);
+      }
+    }
+
+    &_error {
+      border: 2px solid var(--errorLight);
+
+      > div {
+        color: var(--errorLight);
+      }
+    }
+  }
+}

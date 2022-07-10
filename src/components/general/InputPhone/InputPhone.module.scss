@@ -1,0 +1,81 @@
+/* stylelint-disable selector-max-compound-selectors */
+@import '../../../styles/constants';
+
+.inputPhone {
+  min-height: inherit;
+
+  .phone-input-container {
+    .form-control + div::before {
+      display: none;
+    }
+  }
+
+  :global {
+    .input-phone__container.react-tel-input {
+      min-height: inherit;
+
+      .country-list {
+        top: 112%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 2px;
+        animation: mount $anim-time;
+      }
+
+      .special-label {
+        display: none;
+      }
+
+      .form-control {
+        width: 100%;
+        height: initial;
+        min-height: inherit;
+        padding: 0 16px 0 44px;
+        padding-left: 64px;
+        color: var(--textPrimary);
+        background-color: var(--bgPrimary);
+        border: 1px solid var(--borderPrimary);
+        border-radius: $border-radius;
+
+        &::placeholder {
+          color: var(--textHint);
+        }
+
+        &:hover {
+          border-color: var(--borderPrimary);
+        }
+
+        &:focus {
+          border-color: var(--third);
+          box-shadow: none;
+        }
+      }
+
+      .flag-dropdown {
+        position: static;
+      }
+
+      .form-control + div::before {
+        display: none;
+      }
+
+      .selected-flag .arrow {
+        left: 32px;
+        width: 9px;
+        height: 6px;
+        background-size: contain;
+        // background: url('/images/icons/png/select-arrow@2x.png') no-repeat;
+        border: 0;
+      }
+
+      .selected-flag .arrow.up {
+        border: 0;
+      }
+
+      .selected-flag {
+        position: static;
+      }
+    }
+  }
+}

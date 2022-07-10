@@ -1,0 +1,52 @@
+@keyframes loaderAnim {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  :local {
+    margin: auto;
+    border-style: solid;
+    border-radius: 50%;
+    animation: loaderAnim 0.8s infinite, show 0.4s;
+  }
+
+  &_color {
+    &_primary {
+      border-color: var(--primary) transparent var(--primary) transparent;
+    }
+
+    &_secondary {
+      border-color: var(--secondary) transparent var(--secondary) transparent;
+    }
+
+    &_onSecondary {
+      border-color: var(--secondaryContrastText) transparent var(--secondaryContrastText) transparent;
+    }
+  }
+
+  &_size {
+    &_sm {
+      width: 26px;
+      height: 26px;
+      border-width: 2px;
+    }
+
+    &_md {
+      width: 34px;
+      height: 34px;
+      border-width: 3px;
+    }
+
+    &_lg {
+      width: 54px;
+      height: 54px;
+      border-width: 4px;
+    }
+  }
+}

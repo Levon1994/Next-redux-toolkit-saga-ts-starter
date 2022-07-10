@@ -1,0 +1,61 @@
+/* stylelint-disable selector-max-compound-selectors */
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.checkbox {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &_disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  input {
+    display: none;
+
+    &:checked + .checkbox__label {
+      background-color: var(--valid);
+
+      .checkbox__icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--borderDark);
+    border-radius: 2px;
+    transition: background-color $anim-time-fast;
+  }
+
+  &__icon {
+    @include center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 20px;
+    color: var(--primary);
+    opacity: 0;
+    transition: opacity $anim-time-fast;
+    transform: translate(-50%, -50%);
+
+    svg {
+      vertical-align: initial;
+    }
+  }
+}

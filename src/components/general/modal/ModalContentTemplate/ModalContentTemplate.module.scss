@@ -1,0 +1,12 @@
+.modalContentTemplate {
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0 1.5rem 1.5rem;
+
+    &_noPadding {
+      padding: 0;
+    }
+  }
+}

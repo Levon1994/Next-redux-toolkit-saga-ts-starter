@@ -1,0 +1,80 @@
+/* stylelint-disable selector-max-compound-selectors */
+@import '../../../styles/constants';
+
+.switch {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    display: none;
+
+    &:checked + .switch__label {
+      background-color: var(--valid);
+
+      .switch__button {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--borderDark);
+
+    transition: background-color $anim-time-fast;
+  }
+
+  &__button {
+    display: block;
+    background: var(--primary);
+    box-shadow: $box-shadow-light;
+    transition: transform $anim-time-fast;
+  }
+
+  &_size {
+    &_md {
+      width: 44px;
+
+      .switch__label {
+        height: 24px;
+        padding: 2px;
+        border-radius: 24px;
+      }
+
+      .switch__button {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+      }
+    }
+
+    &_sm {
+      width: 36px;
+
+      .switch__label {
+        height: 20px;
+        padding: 2px;
+        border-radius: 20px;
+      }
+
+      .switch__button {
+        width: 16px;
+        height: 16px;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &_disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}

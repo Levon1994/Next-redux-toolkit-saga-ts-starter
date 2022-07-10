@@ -1,0 +1,96 @@
+.paginateWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.paginationContainer {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  cursor: pointer;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: var(--textHint);
+    }
+  }
+
+  &__active {
+    background-color: var(--textDark);
+
+    &:hover {
+      background-color: var(--textDark);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--textLight);
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--textDark);
+    }
+  }
+
+  &__linkDisabled {
+    display: none;
+  }
+
+  &__activeLink {
+    color: var(--primary);
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
+  &__previous {
+    margin-right: 12px;
+    font-size: 1.25rem;
+    color: var(--textLight);
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--textDark);
+    }
+  }
+
+  &__next {
+    margin-left: 12px;
+    font-size: 1.25rem;
+    color: var(--textLight);
+    transition: 0.2s;
+
+    &:hover {
+      color: var(--textDark);
+    }
+  }
+
+  &__labelLink {
+    font-size: 1rem;
+    color: var(--textLight);
+  }
+
+  &:hover {
+    color: var(--textDark);
+  }
+}

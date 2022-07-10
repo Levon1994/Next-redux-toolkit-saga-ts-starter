@@ -1,0 +1,16 @@
+@import '../../../../../styles/constants';
+
+.exampleViewCard {
+  width: 100%;
+  border: 1px solid var(--borderDark);
+  border-radius: $border-radius;
+
+  &__titleWrapper {
+    padding: 8px;
+    border-bottom: 1px solid var(--borderDark);
+  }
+
+  &__contentWrapper {
+    padding: 8px;
+  }
+}

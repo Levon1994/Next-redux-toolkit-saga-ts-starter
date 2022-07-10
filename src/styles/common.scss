@@ -1,0 +1,18 @@
+#__next {
+  min-width: 375px;
+  height: 100%;
+}
+
+.img-cover {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-contain {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

@@ -1,0 +1,131 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.datePicker {
+  position: relative;
+  min-height: inherit;
+
+  :global {
+    .react-datepicker-wrapper {
+      width: 100%;
+      min-height: inherit;
+
+      .react-datepicker {
+        &__input-container {
+          min-height: inherit;
+
+          input {
+            width: 100%;
+            min-height: inherit;
+            padding: 0 16px;
+            color: var(--textPrimary);
+            background-color: var(--bgPrimary);
+            border: 1px solid var(--borderPrimary);
+            border-radius: $border-radius;
+            outline: none;
+            box-shadow: none;
+            transition: border-color $anim-time-fast, background-color $anim-time-fast, opacity $anim-time;
+            -webkit-appearance: none;
+
+            &::placeholder {
+              color: var(--textHint);
+            }
+
+            &:focus {
+              border-color: var(--third);
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_rightBlock {
+    &_xs {
+      :global {
+        .react-datepicker-wrapper {
+          .react-datepicker__input-container {
+            input {
+              padding-right: 28px;
+            }
+          }
+        }
+      }
+    }
+
+    &_sm {
+      :global {
+        .react-datepicker-wrapper {
+          .react-datepicker__input-container {
+            input {
+              padding-right: 36px;
+            }
+          }
+        }
+      }
+    }
+
+    &_md {
+      :global {
+        .react-datepicker-wrapper {
+          .react-datepicker__input-container {
+            input {
+              padding-right: 44px;
+            }
+          }
+        }
+      }
+    }
+
+    &_lg {
+      :global {
+        .react-datepicker-wrapper {
+          .react-datepicker__input-container {
+            input {
+              padding-right: 52px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_error {
+    :global {
+      .react-datepicker-wrapper {
+        .react-datepicker__input-container {
+          input {
+            border-color: var(--error);
+          }
+        }
+      }
+    }
+  }
+
+  &__rightBlock {
+    @include center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 100%;
+    transform: translateY(-50%);
+
+    &_xs {
+      width: 28px;
+    }
+
+    &_sm {
+      width: 36px;
+    }
+
+    &_md {
+      width: 44px;
+    }
+
+    &_lg {
+      width: 52px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "landing": {
+      "title": "Hallo Welt!"
+    }
+  },
+
+  "forms": {
+    "sign-in-form": {
+      "title": "Anmelden"
+    }
+  },
+
+  "layout": {
+    "language-name-en-US": "En",
+    "language-name-fr": "Fr",
+    "language-name-de": "De"
+  }
+}

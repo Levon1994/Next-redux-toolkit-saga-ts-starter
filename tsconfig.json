@@ -1,0 +1,77 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "isolatedModules": true,                   /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */
+    "removeComments": true,                    /* Do not emit comments to output. */
+    "declaration": true,                       /* Generates corresponding '.d.ts' file. */
+    "sourceMap": true,                         /* Generates corresponding '.map' file. */
+    "allowJs": true,                           /* Allow javascript files to be compiled. */
+    "outDir": "build/lib",                     /* Redirect output structure to the directory. */
+    "module": "esnext",                        /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+    "target": "es5",                           /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */
+    "noEmit": true,                            /* Do not emit outputs. */
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+      ],                                       /* Specify library files to be included in the compilation. */
+    "jsx": "preserve",                         /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    // "downlevelIteration": true,             /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
+    // "importHelpers": true,                  /* Import emit helpers from 'tslib'. */
+    // "incremental": true,                    /* Enable incremental compilation */
+    // "rootDir": "./",                        /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    // "checkJs": true,                        /* Report errors in .js files. */
+    // "outFile": "./",                        /* Concatenate and emit output to single file. */
+    
+    /* Strict Type-Checking Options */
+    "strictNullChecks": true,                  /* Enable strict null checks. */
+    "noImplicitThis": true,                    /* Raise error on 'this' expressions with an implied 'any' type. */
+    "noImplicitAny": true,                     /* Raise error on expressions and declarations with an implied 'any' type. */
+    "strict": true,                            /* Enable all strict type-checking options. */
+    // "strictPropertyInitialization": true,   /* Enable strict checking of property initialization in classes. */
+    // "strictFunctionTypes": true,            /* Enable strict checking of function types. */
+    // "alwaysStrict": true,                   /* Parse in strict mode and emit "use strict" for each source file. */
+
+    /* Additional Checks */
+    "noUnusedParameters": true,                /* Report errors on unused parameters. */
+    "noImplicitReturns": true,                 /* Report error when not all code paths in function return a value. */
+    "noUnusedLocals": true,                    /* Report errors on unused locals. */
+    // "noFallthroughCasesInSwitch": true,     /* Report errors for fallthrough cases in switch statement. */
+    
+    /* Module Resolution Options */
+    "allowSyntheticDefaultImports": true,      /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "resolveJsonModule": true,                 /* Enable import json modules. */
+    "moduleResolution": "node",                /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "esModuleInterop": true,                   /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "skipLibCheck": true,                      /* Skip type checking of declaration files. */
+    "rootDirs": [
+      "src"
+    ],                                         /* List of root folders whose combined content represents the structure of the project at runtime. */
+    "baseUrl": ".",                            /* Base directory to resolve non-absolute module names. */
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./public/*"]
+    },                                         /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    // "preserveSymlinks": true,               /* Do not resolve the real path of symlinks. */
+    // "typeRoots": [],                        /* List of folders to include type definitions from. */
+    // "types": [],                            /* Type declaration files to be included in compilation. */
+    
+    /* Other Options */
+    "forceConsistentCasingInFileNames": true,  /* Follows the case sensitivity rules of the file system it’s running on. */
+    "suppressImplicitAnyIndexErrors": true,    /* Suppresses reporting the error about implicit anys when indexing into objects. */
+    "incremental": true
+  },
+  "typeRoots": [
+    "**/node_modules/@types",
+    "**/additional.d.ts",
+    "**/next-env.d.ts",
+  ],
+  "include": ["next-env.d.ts", "additional.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "build",
+    "dist",
+    "out"
+  ],
+}

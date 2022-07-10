@@ -1,0 +1,51 @@
+@import '../../../styles/constants';
+@import '../../../styles/mixins';
+
+.accountInfo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  min-height: 36px;
+  padding: 8px 0 8px 8px;
+
+  &__name {
+    margin: 0 16px;
+  }
+
+  &__menu {
+    min-width: 220px;
+    padding: 8px;
+  }
+
+  &__menuItem {
+    display: flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: var(--primaryDark);
+    }
+
+    > * {
+      flex-shrink: 0;
+
+      &:first-child {
+        margin-right: 16px;
+      }
+
+      &:nth-child(2) {
+        margin-right: auto;
+      }
+    }
+  }
+
+  .collapseIcon {
+    &_open {
+      transform: rotate(180deg);
+    }
+  }
+}

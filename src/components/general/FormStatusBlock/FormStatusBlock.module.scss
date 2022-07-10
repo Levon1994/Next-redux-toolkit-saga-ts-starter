@@ -1,0 +1,18 @@
+@import '../../../styles/mixins';
+
+.formStatusBlock {
+  width: 100%;
+  max-width: 360px;
+
+  &__icon {
+    @include center;
+    width: 72px;
+    height: 72px;
+    border: 3px solid var(--valid);
+    border-radius: 50%;
+
+    &_error {
+      border: 3px solid var(--error);
+    }
+  }
+}
